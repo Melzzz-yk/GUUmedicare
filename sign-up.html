@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUUmedicare</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/imgs/guu-logo-favicon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
-</head>
-</head>
-<body>
-   <header>
-        <h1>Create a <em>Medicare</em> Account</h1>
-        <img src="assets/imgs/guu-logo.png">
-    </header>
-    <div class="wrapper">
-        <div class="input"><input placeholder="Firstname" required type="text"></div>
-        <div class="input"><input placeholder="Lastname" required type="text"></div>
-        <div class="input"><input placeholder="Middlename" type="text"></div>
-        <div class="input"><input type="text" placeholder="Date of Birth" onfocus="(this.type = 'date')" onblur="if('!this.value') this.type('text')" required></div>
-        <div class="input"><input type="text" placeholder="Height"></div>
-        <div class="input"><input type="text" placeholder="Weight"></div>
-        <div class="input"><input type="text" placeholder="Sex" required></div>
-        <div class="input"><input type="email" placeholder="Email"></div>
-        <div class="input"><input type="tel" placeholder="Phone Number" pattern="(\+[2-4]{3}[0-9]{3}[0-9]{3}[0-9]{4}) | ([0-9]{11})"></div>
-        <div class="input"><input type="text" placeholder="House Address"></div>
-        <div class="input"><input type="text" placeholder="Guardian's Name" required></div>
-        <div class="input"><input type="text" placeholder="Guardian's Number" type="tel" pattern="(\+[2-4]{3}[0-9]{3}[0-9]{3}[0-9]{4} | ([0-9]{11}))" required></div>
-        <div class="input"><input placeholder="Password" type="password" required minlength="5" maxlength="15"></div><br>
-        <h2 style="font-size: medium; font-style: italic; font-weight: lighter;">Please, these information are confidential. Don't disclose to anyone. Thank you</h2><br>
-        <a href="sign-up-contd.html"><button class="btn">Next</button></a>
-    </div>
-    <script src="script.js"></script>  
-</body>
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GUUmedicare</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="assets/imgs/guu-logo-favicon.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    </head>
+    <body>
+    <header>
+            <h1>Create a <em>Medicare</em> Account</h1>
+            <img src="assets/imgs/guu-logo.png">
+        </header>
+        <div class="wrapper">
+            <form action="" class="form-wizard">
+                <h1>Registration</h1>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                    <ol>
+                        <li>Personal</li>
+                        <li>School</li>
+                        <li>Account</li>
+                    </ol>
+                </div>
+                <section>
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="firstName" id="first-name"><br>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="lastName" id="last-name"><br>
+                    <label for="date-of-birth">Date Of Birth</label>
+                    <input type="date" name="dateOfBirth" id="date-of-birth">
+                    
+                    <p>Gender</p>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                </section>
+                <section>
+                    <label for="matric-number">Matric Number</label>
+                    <input type="text" name="matricNo" id="matric-number"><br>
+                    <label for="college">College</label>
+                    <input type="text" name="college" id="college">
+                    <label for="department">Department</label>
+                    <input type="text" name="department" id="department"><br>
+                    <label for="level">Level</label>
+                    <input type="text" name="level" id="level">
+                </section>
+                <section>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email"><br>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password"><br>
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" name="confirmPassword" id="confirm-password"><br>
+
+                </section>
+            </form>
+        <script src="script.js"></script>  
+    </body>
+</html> 
